@@ -1,0 +1,120 @@
+/* added weblog.css stylesheet for displaying weblogs
+
+Version: 1.0
+(April 21, 2008) */
+
+/* some jQuery stuff */
+.surprise {
+	display:none;
+	margin-bottom:5px;
+}
+
+.ohmy {
+	background:#FAFFF3 none repeat scroll 0 0;
+	border:1px solid #ACD373;
+	margin-bottom:10px;
+	padding:5px;
+}
+
+/* COMPETENCY DIVS */
+
+.competency {
+    border-width: medium;
+    border-color: black;
+	margin:0.5em 0.5em 3em;
+	padding:0.5em;
+}
+
+.competency-relations {
+}
+
+.competency-relations ul {
+}
+	
+.competency-relations ul li {
+	/* line-height: 2.5ex; */
+	display: block; 
+	margin-top: 10px; 
+	margin-bottom: 10px; 
+	list-style: none;
+	line-height: 1.4em;
+}
+
+.competency-date {
+	color:#999999;
+	margin:0pt;
+	padding:0pt;
+}
+
+.competency-title {
+	border:medium none;
+	font-size:160%;
+	margin:5px 0pt 0.5em;
+	padding:0pt;
+}
+
+.competency-sub-title {
+	border:none;
+	font-size:120%;
+	margin:15px 0pt 0.5em;
+	padding:0pt;
+	border-bottom: 1px;
+	border-bottom-style: solid;
+}
+
+.competency-content {
+	margin:0pt;
+	padding:0.2em 0pt;
+}
+
+.competency-info {
+	border-top:1px solid #CCCCCC;
+	clear:both;
+	color:#999999;
+	font-size:0.9em;
+	margin:0pt;
+	padding:3px 0pt;
+}
+
+.competency-comments {
+	float:right;
+}
+
+.competency-info em {
+	color:#666666;
+	font-style:normal;
+}
+
+.competency-info em.cat {
+	/* background:transparent url(img/star.png) no-repeat scroll left center; */
+	padding:2px 0pt 2px 12px;
+}
+
+#comments, #respond {
+	margin:2em 0pt 0pt 5px;
+}
+	
+.last-list ol {
+	width: 300px;
+}
+.last-list ol li {
+	margin-top: 10px; 
+	margin-bottom: 10px; 
+	line-height: 1.4em;
+}
+
+
+li {
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+
+div .left {
+	float: left;
+}
+
+div .right {
+	float: right;
+}
+
+/* END COMPETENCY DIVS */

@@ -1,0 +1,15 @@
+<decorators defaultdir="/decorators">
+    <excludes>
+        <pattern>/40*.jsp</pattern>
+        <pattern>/*ajax=true*</pattern>
+        <pattern>/scripts/dojo/*</pattern>
+        <pattern>/struts/dojo/*</pattern> 
+        <pattern>/resources/*</pattern>
+		<!-- maybe not required: SKB -->
+        <pattern>/SearchI2G/net.i2geo.skillstextbox.SkillsTextBox/*</pattern>
+        <pattern>/SearchI2G/search/*</pattern>
+    </excludes> 
+    <decorator name="default" page="default.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+</decorators>

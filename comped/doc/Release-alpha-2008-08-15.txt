@@ -1,0 +1,38 @@
+1. Reverted your pom settings for maven-compiler-plugin. It was already set.
+
+2. I had to outcomment ActiveMath dependency/repository. It introduced some strange NoSuchField Exception: TRACE.
+
+Release Notes:
+1. CompEd allows for viewing competencies/topics.
+2. It displays competencies/topics in a list and on a single
+   page.
+3. The default name is devised from the URL. Hence,it is always in
+   English.
+4. Competencies also point to their specifications/generalizations.
+5. Competency Types and Descriptions are considered are represented by
+   one Java class. Note, types have no names so far.
+6. Topics/Competencies display names according to their name type.
+
+7. Synchronization is done only in one way, from Ontology to CompEd.
+   A maven plugin for comped was developed which generates an xml file
+   from a template and the ontology which is taken from the official
+   http address. The generated file can be inserted into the database
+   in a next step.
+
+   Information that CompEd stores that is not in the ontology comprises:
+   - name of the creator
+   - created datestamp
+   - modified datestamp
+   - status (Public, Draft, ...)
+   - comment status (open for comments, closed, ...)
+   - comment days (allow comments for a certain time period.
+
+   This information is in principle not necessary to run CompEd. The
+   plugin will substitute this information by default values.
+
+Minor issues to be done (takes 24 hours):
+- set a "verb" boolean property on competencies to distinguish between
+  classes and instances.
+- make an index on the name field to allow for a simple alphabetical
+  sorting.
+- make uri property unique 

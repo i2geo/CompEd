@@ -1,0 +1,95 @@
+Release notes:
+=======================================
+1. Made URI unique	
+2. Added indices on name fields
+3. Retrieve items by friendly URLs. Accepts names in URL (Competency/Topic)
+   - Example for http://www.inter2geo.eu/2008/ontology.owl#Apply_percentage_rate
+   
+     => http://localhost:8080/showCompetency.html?uri=Apply_percentage_rate
+     => http://localhost:8080/showCompetency.html?uri=aPPly_perCenTage_rate
+	 => http://localhost:8080/showCompetency.html?id=395
+
+4. Orders competencies/topics alphabetically on list pages
+5. Hide id column in competency/topic list
+6. Topics/Competencies are browsable for anonymous users.
+7. CompEd has a Maven profile setting for test and for production use. It
+   uses two different databases to avoid re-population.
+8. Index page added such that guest users have access to competencies.
+9. Index page display last x created/modified Topics
+10. corrected links to flags: relative to context; without parameter appends that 
+    caused a reload.
+11. Links in competency structural part finally show up in a correctly with 'uri'
+    as single parameter.
+12. Doubled session timeout from 10 to 20 minutes.
+13. Integrated jQuery; ready to use
+14. Redesigned object model for competencies. Now, it addresses competency individuals
+    and processes separately. Short delay, as I needed to dive into generics.
+15. Entry page lists last created/modified competency individuals/processes and topics
+16. Entry page items are linked
+17. competency page prototypes a jquery toggle function for foreign names
+18. competency page prototypes edit/delete/translate links 
+    --> add should also be part of.
+19. competency page lists linked topics
+    --> add/delete should be part of it, too
+20. CompEd plugin checks for missing/wrong locales
+21. CompEd plugin checks for uniqueness of URIs
+22. CompEd plugin connects competencies to topics
+23. CompEd plugin ontology src is parametrizeable
+24. Integration of SkillsTextBox through ProxyServlet
+	-- not diosplayed yet, due to some side effects
+25. add/delete/edit of names in competencies/processes/topics
+26. nameForm proposes current locale as default language
+27. proper handling of competency individuals/classes; no subsumption relation
+    -> this is also reflected by comped-maven-plugin
+28. comped-maven-plugin prints some stats information
+29. removed composition/subsumption from view (JSP)
+30. NOPE: SkillsTextBox is accessible to guest users;
+    -> was a security issue of a link referencing to a css outside comped; 
+    -> CompEd has now integrated the css for SkillsTextBox
+31. Refactoring; made "verb" -> "process"
+32. Got Rid of "verb" flag and "nicename" properties
+33. Display tree view of a competency process hierarchy
+    --> based tree creation on ITree class from prizetags
+    --> generation happens in the Manager class
+34. Changed menu to inclusion of a submenu on processes
+    - submenu has entries: tree view / list view
+35. Added "Add" action to competency sub menus
+36. TreeView of each competency process possible
+	* ordered tree view
+37. Ordered topics
+38. Generics for Topic to distinguish between item and group
+39. added slideToggle to names display
+40. Big issue: i18n of all items coming from DB
+    but: alpha order lost!!! could do in memory, though!
+41. items are now with respect to current locale
+42. Link in header to switch to English language removed
+43. Topics are linked from competencies with respect to type
+44. similarity competencies are displayed properly
+45. Bug solved: first line of properties file seems not to be translated
+46. Search on Hibernate implemented
+
+	Basically, search finds all entities that have a name which is like 
+	the token string. The manager sets the entities' names to be displayed in the 
+	correct locale.
+
+	+ implemented for topics/competencies
+	+ for DAOs/Managers
+	+ test methods on DAOs/Managers
+	+ search JSP added
+	+ search action added
+	+ search phrases to German/English properties added
+	+ search is enabled for all users by security.xml
+
+47. Made a test with OS CacheFilter on. No significant improvement.
+48. correct handling of topic representatives
+49. fixed topic.jsp which did not render the hierarchy tree
+50. database population with dbunit speed improved by factor 10
+  everything is populated within a single transaction
+  
+MH
+
+Further work:
+=======================================
+- would like to move project to a full-source project; could simplify
+  a few things; gives more control; improves development 
+   

@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <mapping class="org.appfuse.model.User"/>
+        <mapping class="org.appfuse.model.Role"/>
+        <mapping class="net.i2geo.comped.model.Thing"/>
+        <mapping class="net.i2geo.comped.model.ConcreteCompetency"/>
+        <mapping class="net.i2geo.comped.model.CompetencyProcess"/>
+        <mapping class="net.i2geo.comped.model.Name"/>
+        <mapping class="net.i2geo.comped.model.Description"/>
+        <mapping class="net.i2geo.comped.model.AbstractTopic"/>
+        <mapping class="net.i2geo.comped.model.ConcreteTopic"/>
+    </session-factory>
+</hibernate-configuration>
