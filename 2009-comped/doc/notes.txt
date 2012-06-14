@@ -1,0 +1,278 @@
+How to run CompEd on amath-one:
+1. log in as ilo
+2. cd intergeo/draft/compedCheckout
+3. run 'mvn -Pprod-clean-repopulate clean package'
+4. copy to tomcat:
+   rsync -av target/comped-1.0-SNAPSHOT/ ../../tomcat-for-draft/webapps/comped/ --delete
+5. watch the debug data in 
+   /opt/local/activemath/users/ilo/intergeo/draft/tomcat-for-draft/logs/catalina.out
+
+
+Using SkillsTextBox for search!
+		<script type="text/javascript">
+        	window.skbSearchPleaseReplaceMe =  "searchField|  |showNode";
+          	window.skbConfigBasePath = "/SearchI2G/net.i2geo.skillstextbox.SkillsTextBox/";
+          	window.browserLanguages = "de-DE,de;q=0.9,en-GB;q=0.9,en;q=0.8,en-US;q=0.7,en-gb;q=0.6,fr-FR;q=0.6,fr;q=0.5,it-IT;q=0.4,it;q=0.4,nl-NL;q=0.3,nl;q=0.2,en-us;q=0.1,en;q=0.1";
+      	</script>
+		<script language='javascript' src='/SearchI2G/net.i2geo.skillstextbox.SkillsTextBox/net.i2geo.skillstextbox.SkillsTextBox.nocache.js'></script>
+
+
+		<div class="clearfix">
+			<form action="" onsubmit="return false;">
+				<div id="searchField" class="right"></div>
+			</form>
+
+		<script type="text/javascript">
+			window.justAlert = new Function("a","b","alert('choice identified :' + a + ' of type ' + b);");
+			window.showNode = new Function("uri","type","doShowNode(uri,type);");
+			function doShowNode(uri,type) {
+				// http://draft.i2geo.net/comped/showProcess.html?uri=Sketch_graph
+				if("topic" == type)
+					window.location.href = "showTopic.html?uri=" + uri;
+				else if ("competency"==type)
+					window.location.href = "showCompetency.html?uri="  + uri;
+				else alert("Don't know what to do with this type \"" + type + "\".");
+			}
+		</script>
+		</div>
+
+============================================================================================
+
+Menu config:
+
+			<Item name="ProcessMenu" title="item.processes" >
+				<Item name="ListViewProceses" title="menu.viewList" page="/processes.html"/>
+				<Item name="TreeViewProceses" title="menu.viewTree" page="/cpTree.html"/>
+				<Item name="AddProcess" title="button.add" page="/editProcess.html" />
+			</Item>
+			<Item name="ConcreteCompetencyMenu" title="item.competencies" >
+				<Item name="ListViewCompetencies" title="menu.viewList" page="/competencies.html"/>
+				<Item name="TreeViewCompetencies" title="menu.viewTree" page="/ccTree.html"/>
+				<Item name="AddCompetency" title="button.add" page="/editCompetency.html" />
+			</Item>
+			<Item name="AddThis" title=""/>
+			<Item name="AbstractTopicMenu" title="item.tgroups" >
+				<Item name="ListViewAbstractTopics" title="menu.viewList" page="/abstractTopics.html"/>
+				<Item name="TreeViewAbstractTopics" title="menu.viewTree" page="/tgTree.html"/>
+				<Item name="AddAbstractTopic" title="button.add" page="/editAbstractTopic.html" />
+			</Item>
+			<Item name="ConcreteTopicMenu" title="item.topics" >
+				<Item name="ListViewConcreteTopics" title="menu.viewList" page="/topics.html"/>
+				<Item name="TreeViewConcreteTopics" title="menu.viewTree" page="/tiTree.html"/>
+				<Item name="AddConcreteTopic" title="button.add" page="/editTopic.html"  />
+			</Item>
+			<Item name="AddThis" title=""/>
+
+============================================================================================
+
+
+SELECT * FROM competency, c_names, name 
+	where competency.id=c_names.competency_id 
+		and c_names.names_id=name.id 
+		and name.locale="fr" 
+		and name.type="COMMON" 
+	ORDER BY name.name;
+
+SkillsTextBox
+and run mvn -Dmaven.test.skip install at root.
+once it starts, please invoke /SearchI2G/indexing/doIndex
+
+
+						<s:set name="tType" value="%{getClass().getName()}"/>
+						
+						<s:if test="%{#tType=='net.i2geo.comped.model.AbstractTopic'}">
+							<s:url id="showTopic" action="showAbstractTopic" includeParams="none">
+								<s:param name="uri">${fn:substringAfter(uri,"ontology.owl#")}</s:param>
+							</s:url>
+						</s:if>
+
+
+a) competency processes are not distinct.
+   That is a subprocess can also be a subprocess of another process.
+
+b) a concrete competency can belong to more than one competency process
+
+c) you don't use the subsumption relation on concrete competencies. 
+   That is, no concrete competency specializes some other concrete competency.
+
+<!--
+	<div>
+		<appfuse:cptree name="" prompt="" selected="${competency}" treemap="${tree}"/>
+	</div>
+-->
+
+    <script language='javascript' src='net.i2geo.skillstextbox.SkillsTextBox/net.i2geo.skillstextbox.SkillsTextBox.nocache.js'></scr
+   ipt>
+
+<security:authorize ifAnyGranted="ROLE_ADMIN">
+	<p> Dies ist ein kurzer Text ... davor.
+
+  <form action="" onsubmit="return false;">
+      <div id="SkillsTextBox"></div>
+      <input id="idsStorage" type="hidden" name="idsStorage_" value="Circle_r,Segment_r" />
+
+      <script type="text/javascript">
+          window.top.skbPleaseReplaceMeActive =  "SkillsTextBox|idsStorage|  |true";
+          
+          window.top.skbConfigBasePath = "net.i2geo.skillstextbox.SkillsTextBox/";
+      </script>
+  </form>
+
+	<p> Dies ist ein kurzer Text ... danach.
+</security:authorize>
+
+
+
+
+
+        <p>This editor is without debug and allows any node to be input.</p>
+        <form action="" onsubmit="return false;">
+    		<div id="SkillsTextBox3"></div>
+            <p><a href="javascript:window.skbEdit('SkillsTextBox3','idsStorage', '','false');">edit</a></p>
+            <p>underlying storage (normally hidden):<input name="idsStorage_" id="idsStorage" value="Determine_the_image_of_a_number_in_affine_function_on_its_graph,Segment_r"/></p>
+        </form>
+
+
+
+
+
+
+    <!-- Fallback locale if no bundles found for browser's preferred locale -->
+    <!-- Force a single locale using param-name 'javax.servlet.jsp.jstl.fmt.locale' -->
+    <!--  context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.fallbackLocale</param-name>
+        <param-value>en</param-value>
+    </context-param -->
+
+
+Comments don't work very well in JSP pages
+
+Snippet from topic.jsp:
+
+	<div class="topic-relations">
+		<p>
+			<s:if test="topic.names.isEmpty">
+				<fmt:message key="topicDetail.allNames.not"/>
+			</s:if>
+		    <s:else>
+				<fmt:message key="topicDetail.allNames"/>
+				<ul>
+					<s:iterator value="topic.names">
+						<s:set name="localeURL" value="%{'/images/flags/'+locale+'.png'}"/>
+						<li>
+							<img src="<s:property value="#localeURL"/>"/>
+							<s:property value="name" /> -- <s:property value="type"/>
+						</li>
+					</s:iterator>
+				</ul>
+			</s:else>
+		</p>
+	</div> 
+	
+
+Go back to previous page/action: 
+<a class="button" href="javascript:history.back()">Back</a> 
+
+
+[25.08.2008 15:16:24] Paul Libbrecht says: martin, can you repeat the "cleaner-URL" pattern?
+[25.08.2008 15:16:35] Paul Libbrecht says: showCompetency_uri.html?
+[25.08.2008 15:16:54] Martin Homik says: I'm depressed with bloody finances. Gimme a few minutes.
+[25.08.2008 15:17:02] Paul Libbrecht says: oh boy, sorry
+[25.08.2008 15:18:26] Martin Homik says: Worst days are when Erica returns from holiday.
+[25.08.2008 15:18:34] Paul Libbrecht says: burst in laugh
+[25.08.2008 15:18:38] Paul Libbrecht says: I just declined her deadline !
+[25.08.2008 15:19:11] Paul Libbrecht says: no, that doesn't work
+[25.08.2008 15:19:12] Paul Libbrecht says: http://draft.i2geo.net/comped/showCompetency_Analyze_simple_figure.html
+[25.08.2008 15:19:19] Paul Libbrecht says: whereas that works: http://draft.i2geo.net/comped/showCompetency.html?uri=Analyze_simple_figure
+[25.08.2008 15:19:26] Paul Libbrecht says: but maybe I haven't updated
+[25.08.2008 15:26:55] Martin Homik says: Since I did not cared about this, I can't work.
+[25.08.2008 15:27:24] Martin Homik says: If at all then:
+http://draft.i2geo.net/comped/showCompetency/Analyze_simple_figure
+[25.08.2008 15:27:51] Martin Homik says: But more likely for the time beeing:
+http://draft.i2geo.net/comped/showCompetency/uri/Analyze_simple_figure
+[25.08.2008 15:28:05] Martin Homik says: both don't work.
+[26.08.2008 09:23:11] Martin Homik says: Are you responsible for this?
+http://draft.i2geo.net/comped/showTopic.html?uri=Segment_r
+[26.08.2008 09:24:09] Paul Libbrecht says: Well, I don't know
+[26.08.2008 09:24:13] Paul Libbrecht says: it works with competences
+[26.08.2008 09:24:14] Paul Libbrecht says: http://draft.i2geo.net/comped/showCompetency.html?uri=apply_bisection_method
+[26.08.2008 09:24:37] Martin Homik says: When did you do the last update?
+[26.08.2008 09:24:53] Paul Libbrecht says: I don't think I changed anything to make it NPE in showTopic
+[26.08.2008 09:24:57] Martin Homik says: It works on my local machine.
+[26.08.2008 09:24:58] Paul Libbrecht says: but I had this issue yesterday before updating.
+[26.08.2008 09:25:01] Paul Libbrecht says: mmh
+[26.08.2008 09:25:04] Paul Libbrecht says: yesterday I updated.
+[26.08.2008 09:25:58] Paul Libbrecht says: amath-one compedCheckout/comped> svn status
+M      src/main/resources/default-data.xml
+M      pom.xml
+a
+[26.08.2008 09:41:52] Martin Homik says: what user do you use then?
+[26.08.2008 09:42:03] Paul Libbrecht says: +        		<jdbc.username>i2geocomped</jdbc.username>
+[26.08.2008 09:42:14] Paul Libbrecht says: +        		<jdbc.url><![CDATA[jdbc:mysql://amath-one.dfki.uni-sb.de/drafti2geonetComped?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]></jdbc.url>
+[26.08.2008 09:42:19] Paul Libbrecht says: password of ilo
+
+[27.08.2008 17:40:28] Paul Libbrecht says: yes, wp2
+[27.08.2008 17:40:38] Paul Libbrecht says: http://134.96.236.85:8080/i2geo-servletutils-1.0-SNAPSHOT/net.i2geo.skillstextbox.SkillsTextBox/SkillsTextBox.html
+[27.08.2008 17:40:44] Paul Libbrecht says: is a maven build of a proxy to draft
+[27.08.2008 17:42:08] Martin Homik says: works
+[27.08.2008 17:42:15] Paul Libbrecht says: you should be able to:
+[27.08.2008 17:42:21] Paul Libbrecht says: - depend on that project (soon on repo)
+[27.08.2008 17:42:28] Martin Homik says: okay
+[27.08.2008 17:42:29] Paul Libbrecht says: - use the servlet as indicated in the current web.xml
+[27.08.2008 17:42:34] Martin Homik says: okay
+[27.08.2008 17:42:41] Paul Libbrecht says: /comped/search would then search skills-text-box
+[27.08.2008 17:42:54] Paul Libbrecht says: (kind of a debatable path but that's how Skills-text-box is parametrized)
+
+[27.08.2008 17:46:38] Paul Libbrecht says: amazing maven
+[27.08.2008 17:46:41] Paul Libbrecht says: you can depend on it
+[27.08.2008 17:47:35] Paul Libbrecht says: groupId: net.i2geo
+[27.08.2008 17:47:48] Paul Libbrecht says: artifactId: i2geo-servletutils
+[27.08.2008 17:47:54] Paul Libbrecht says: version: 1.0-SNAPSHOT	
+[27.08.2008 17:48:14] Paul Libbrecht says: enrich your xml with example from http://svn.activemath.org/intergeo/Platform/ServletUtils/src/main/webapp/WEB-INF/web.xml
+
+
+Tell Hibernate not to drop tables: Use in combination of dbunit to update tables:
+
+
+         			    <plugin>
+                <groupId> org.codehaus.mojo</groupId>
+                <artifactId>hibernate3-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <components>
+                        <component>
+                            <name>hbm2ddl</name>
+                            <implementation>annotationconfiguration</implementation>
+                        </component>
+                    </components>
+                    <componentProperties>
+                        <outputfilename>yourSchemaFilename.sql</outputfilename>
+                        <drop>false</drop>
+                        <create>false</create>
+                        <update>true</update>
+                        <jdk5>true</jdk5>
+                        <propertyfile>target/test-classes/jdbc.properties</propertyfile>
+                        <configurationfile>src/test/resources/hibernate.cfg.xml</configurationfile>
+                        <skip>true</skip>
+                    </componentProperties>
+                </configuration>
+            </plugin>
+
+
+
+				//jQuery("div.surprise").addClass("ohmy").show("slow");
+
+			/*
+			//close all the content divs on page load
+			jQuery('.surprise').hide();
+			
+			// fade in and out
+			jQuery('more').toggle(
+				function() {
+					jQuery(this).siblings('.surprise').fadeIn('slow');
+				}, 
+				function() {
+					jQuery(this).siblings('.surprise').fadeOut('slow');
+				}
+			);
+				*/

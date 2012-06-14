@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+       default-lazy-init="true">
+
+    <!-- Add new DAOs here -->
+	<bean id="thingDao"
+		class="net.i2geo.comped.dao.hibernate.ThingDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="competencyDao"
+		class="net.i2geo.comped.dao.hibernate.CompetencyDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="concreteCompetencyDao"
+		class="net.i2geo.comped.dao.hibernate.ConcreteCompetencyDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="competencyProcessDao"
+		class="net.i2geo.comped.dao.hibernate.CompetencyProcessDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="nameDao"
+		class="net.i2geo.comped.dao.hibernate.NameDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="descriptionDao"
+		class="net.i2geo.comped.dao.hibernate.DescriptionDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="topicDao"
+		class="net.i2geo.comped.dao.hibernate.TopicDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="abstractTopicDao"
+		class="net.i2geo.comped.dao.hibernate.AbstractTopicDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="concreteTopicDao"
+		class="net.i2geo.comped.dao.hibernate.ConcreteTopicDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+    <!-- Add new Managers here -->
+	<bean id="thingManager"
+		class="net.i2geo.comped.service.impl.ThingManagerImpl">
+		<constructor-arg ref="thingDao" />
+	</bean>
+
+	<bean id="competencyManager"
+		class="net.i2geo.comped.service.impl.CompetencyManagerImpl">
+		<constructor-arg ref="competencyDao" />
+	</bean>
+
+	<bean id="concreteCompetencyManager"
+		class="net.i2geo.comped.service.impl.ConcreteCompetencyManagerImpl">
+		<constructor-arg ref="concreteCompetencyDao" />
+	</bean>
+
+	<bean id="competencyProcessManager"
+		class="net.i2geo.comped.service.impl.CompetencyProcessManagerImpl">
+		<constructor-arg ref="competencyProcessDao" />
+		<property name="concreteCompetencyDao" ref="concreteCompetencyDao"/>
+	</bean>
+
+	<bean id="topicManager"
+		class="net.i2geo.comped.service.impl.TopicManagerImpl">
+		<constructor-arg ref="topicDao" />
+	</bean>
+
+	<bean id="abstractTopicManager"
+		class="net.i2geo.comped.service.impl.AbstractTopicManagerImpl">
+		<constructor-arg ref="abstractTopicDao" />
+		<property name="concreteCompetencyDao" ref="concreteCompetencyDao"/>
+		<property name="concreteTopicDao" ref="concreteTopicDao"/>
+	</bean>
+
+	<bean id="concreteTopicManager"
+		class="net.i2geo.comped.service.impl.ConcreteTopicManagerImpl">
+		<constructor-arg ref="concreteTopicDao" />
+		<property name="concreteCompetencyDao" ref="concreteCompetencyDao"/>
+	</bean>
+	
+	<bean id="nameManager"
+		class="net.i2geo.comped.service.impl.NameManagerImpl">
+		<constructor-arg ref="nameDao" />
+		<property name="ctm" ref="concreteTopicManager"/>
+		<property name="atm" ref="abstractTopicManager"/>
+		<property name="ccm" ref="concreteCompetencyManager"/>
+		<property name="cpm" ref="competencyProcessManager"/>
+	</bean>
+
+	<bean id="cpManagerCacheProxy"
+		class="net.i2geo.comped.service.impl.CompetencyITreeManagerCacheProxyImpl">
+		<constructor-arg ref="competencyProcessManager"/>
+	</bean>
+
+	<bean id="searchI2GManager"
+		class="net.i2geo.comped.service.SearchI2GManager">
+		<property name="browserPath" value="${comped.searchI2G.browserPath}"/>
+	</bean>
+	
+</beans>

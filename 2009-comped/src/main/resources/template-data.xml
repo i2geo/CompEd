@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <table name="app_user">
+        <column>id</column>
+        <column>username</column>
+        <column>password</column>
+        <column>first_name</column>
+        <column>last_name</column>
+        <column>address</column>
+        <column>city</column>
+        <column>country</column>
+        <column>language</column>
+        <column>email</column>
+        <column>phone_number</column>
+        <column>postal_code</column>
+        <column>province</column>
+        <column>website</column>
+        <column>password_hint</column>
+        <column>version</column>
+        <column>account_enabled</column>
+        <column>account_expired</column>
+        <column>account_locked</column>
+        <column>credentials_expired</column>
+        <row>
+            <value description="id">1</value>
+            <value description="username">user</value>
+            <value description="password">12dea96fec20593566ab75692c9949596833adc9</value>
+            <value description="first_name">Tomcat</value>
+            <value description="last_name">User</value>
+            <value description="address"></value>
+            <value description="city">Denver</value>
+            <value description="country">US</value>
+            <value description="language">en</value>
+            <value description="email">matt_raible@yahoo.com</value>
+            <value description="phone_number"></value>
+            <value description="postal_code">80210</value>
+            <value description="province">CO</value>
+            <value description="website">http://tomcat.apache.org</value>
+            <value description="password_hint"><![CDATA[The same as your username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+        </row>
+        <row>
+            <value description="id">2</value>
+            <value description="username">admin</value>
+            <value description="password">d033e22ae348aeb5660fc2140aec35850c4da997</value>
+            <value description="first_name">Matt</value>
+            <value description="last_name">Raible</value>
+            <value description="address"></value>
+            <value description="city">Denver</value>
+            <value description="country">US</value>
+            <value description="language">en</value>
+            <value description="email">matt@raibledesigns.com</value>
+            <value description="phone_number"></value>
+            <value description="postal_code">80210</value>
+            <value description="province">CO</value>
+            <value description="website">http://raibledesigns.com</value>
+            <value description="password_hint"><![CDATA[The same as your username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+        </row>
+	    <row>
+	      	<value description="id">3</value>
+	      	<value description="username">ontoengineer</value>
+	      	<value description="password">9f193e976d1c7e9c38fd3d35786e0c5dcbef8965</value>
+	      	<value description="first_name">Ontology</value>
+	      	<value description="last_name">Engineer</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+            <value description="language">de</value>
+	     	<value description="email">ontoengineer@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~ontoengineer</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+          	<value description="version">1</value>
+          	<value description="account_enabled">1</value>
+          	<value description="account_expired">0</value>
+          	<value description="account_locked">0</value>
+          	<value description="credentials_expired">0</value>
+	    </row>
+	    <row>
+	      	<value description="id">4</value>
+	      	<value description="username">editordev</value>
+	      	<value description="password">2f295df180ed5451e4674d8c77dd13c9fd0ce485</value>
+	      	<value description="first_name">Editor</value>
+	      	<value description="last_name">Developer</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+            <value description="language">de</value>
+	      	<value description="email">editordev@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	     	<value description="website">http://www.i2geo.net/~editordev</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+          	<value description="version">1</value>
+         	<value description="account_enabled">1</value>
+          	<value description="account_expired">0</value>
+         	<value description="account_locked">0</value>
+          	<value description="credentials_expired">0</value>
+	    </row>
+	    <row>
+	      	<value description="id">5</value>
+	      	<value description="username">platformdev</value>
+	      	<value description="password">6a592c559b5432493b9e637f397f6a4e0bde2000</value>
+	      	<value description="first_name">Platform</value>
+	      	<value description="last_name">Developer</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+			<value description="language">de</value>		
+	      	<value description="email">platformdev@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~platformdev</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+	    </row>
+	    <row>
+		  	<value description="id">6</value>
+	      	<value description="username">currencoder</value>
+	      	<value description="password">9669655389fefbbf37293733ef1ed6ef8e5efdaf</value>
+		    <value description="first_name">Curriculum</value>
+		    <value description="last_name">Encoder</value>
+		    <value description="address"></value>
+		    <value description="city">Saarbruecken</value>
+		    <value description="country">DE</value>
+            <value description="language">es</value>
+		    <value description="email">currencoder@i2geo.net</value>
+            <value description="phone_number"></value>
+		    <value description="postal_code">66111</value>
+		    <value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~currencoder</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+	    </row>
+	    <row>
+	      	<value description="id">7</value>
+	      	<value description="username">currannotator</value>
+	      	<value description="password">f26ca526581dfdb2c4af170f097aa3457261bf35</value>
+	      	<value description="first_name">Curriculum</value>
+	      	<value description="last_name">Annotator</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+            <value description="language">es</value>
+	      	<value description="email">currannotator@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~currannotator</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+	    </row>
+	    <row>
+	      	<value description="id">8</value>
+	      	<value description="username">translator</value>
+	      	<value description="password">2e47fc71395d54a4ecc4b06c9772f92c60252843</value>
+	      	<value description="first_name">Mister</value>
+	      	<value description="last_name">Translator</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+            <value description="language">fr</value>
+	      	<value description="email">translator@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~translator</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+	    </row>
+	    <row>
+	      	<value description="id">9</value>
+	      	<value description="username">resannotator</value>
+	      	<value description="password">a0763a18720b24dc41629669fd7282744b21dff9</value>
+	      	<value description="first_name">Resource</value>
+	      	<value description="last_name">Annotator</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+            <value description="language">fr</value>
+	      	<value description="email">resannotator@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~resannotator</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+	    </row>
+	    <row>
+	      	<value description="id">10</value>
+	      	<value description="username">resquerier</value>
+	      	<value description="password">da4effee381db1a4829f916d76ece232da1544a2</value>
+	      	<value description="first_name">Resource</value>
+	      	<value description="last_name">Querier</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+            <value description="language">fr</value>
+	      	<value description="email">resquerier@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~resquerier</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+	    </row>
+
+	    <row>
+	      	<value description="id">11</value>
+	      	<value description="username">french</value>
+	      	<value description="password">32f897f04b545b8da26e1e2ebac7eeb732b0cbb1</value>
+	      	<value description="first_name">french</value>
+	      	<value description="last_name">french</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+            <value description="language">fr</value>
+	      	<value description="email">french@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~french</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+	    </row>
+
+	    <row>
+	      	<value description="id">12</value>
+	      	<value description="username">german</value>
+	      	<value description="password">d8680aea3e8adf668a249eba62192fa1ed9336f1</value>
+	      	<value description="first_name">german</value>
+	      	<value description="last_name">german</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+            <value description="language">de</value>
+	      	<value description="email">german@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~german</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+	    </row>
+
+	    <row>
+	      	<value description="id">13</value>
+	      	<value description="username">spanish</value>
+	      	<value description="password">e3d92827c04e8bd003692ed8189f8467b9e58178</value>
+	      	<value description="first_name">spanish</value>
+	      	<value description="last_name">spanish</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+            <value description="language">es</value>
+	      	<value description="email">spanish@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~spanish</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+	    </row>
+
+	    <row>
+	      	<value description="id">14</value>
+	      	<value description="username">dutch</value>
+	      	<value description="password">0aa7a65144d75f8b66ad8980173b5bc078bbed30</value>
+	      	<value description="first_name">dutch</value>
+	      	<value description="last_name">dutch</value>
+	      	<value description="address"></value>
+	      	<value description="city">Saarbruecken</value>
+	      	<value description="country">DE</value>
+            <value description="language">nl</value>
+	      	<value description="email">dutch@i2geo.net</value>
+            <value description="phone_number"></value>
+	      	<value description="postal_code">66111</value>
+	      	<value description="province">Saarland</value>
+	      	<value description="website">http://www.i2geo.net/~dutch</value>
+	      	<value description="password_hint"><![CDATA[Same es username.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+	    </row>
+    </table>
+    <table name="role">
+        <column>id</column>
+        <column>name</column>
+        <column>description</column>
+        <row>
+            <value description="id">1</value>
+            <value description="name">ROLE_ADMIN</value>
+            <value description="description"><![CDATA[Administrator who cares that the 
+            result of curriculum encoder and curriculum-text annotator are digested 
+            regularly into the user-interface.]]></value>
+        </row>
+        <row>
+            <value description="id">2</value>
+            <value description="name">ROLE_USER</value>
+            <value description="description"><![CDATA[Default role for all Users]]></value>
+        </row>
+        <row>
+            <value description="id">3</value>
+            <value description="name">ROLE_ONTOLOGY_ENGINEER</value>
+            <value description="description"><![CDATA[One who writes the 
+            ontology specification and encodes it, that one that specifies 
+            the abstraction mechanisms to be implemented by the editor 
+            developer.]]></value>
+        </row>
+        <row>
+            <value description="id">4</value>
+            <value description="name">ROLE_EDITOR_DEVELOPER</value>
+            <value description="description"><![CDATA[One who designs and develops 
+            the topics and competency editor which uses the ontology specification 
+            in order to create a usable editor for topics, competencies, and levels 
+            related tools.]]></value>
+        </row>
+        <row>
+            <value description="id">5</value>
+            <value description="name">ROLE_PLATFORM_DEVELOPER</value>
+            <value description="description"><![CDATA[Developer of the Intergeo 
+            platform which uses the metadata specification and ontology structure in 
+            order to allow for the appropriate information edition and presentation 
+            in the querier and annotator roles. This developer also adapts the 
+            indexing, search, and auto-fill interfaces.]]></value>
+        </row>
+        <row>
+            <value description="id">6</value>
+            <value description="name">ROLE_CURRICULUM_ENCODER</value>
+            <value description="description"><![CDATA[The role browsing through a 
+            curriculum-text (a standard, a textbook) and create, in the ontology, 
+            the needed competencies and topics. This may also require to declare a new 
+            learning-pathway, region, programme.]]></value>
+        </row>
+        <row>
+            <value description="id">7</value>
+            <value description="name">ROLE_CURRICULUM_TEXT_ANNOTATOR</value>
+            <value description="description"><![CDATA[The role of identifying a text of 
+            interest that could be shared among intergeo platform users, obtaining an 
+            appropriate electronic version, adding hyperlinks into this text linked to 
+            the competency and topics web-view, and uploading the document into the 
+            platform for further sharing.]]></value>
+        </row>
+        <row>
+            <value description="id">8</value>
+            <value description="name">ROLE_TRANSLATOR</value>
+            <value description="description"><![CDATA[Usage of the competency-editing-tool in 
+            order to add or edit titles of a competency or topic or descriptions in the own  
+            language. Typically such a role requires knowledge of several languages but does not 
+            require to understand the data-model of a competency (hence cannot change it).]]></value>
+        </row>
+        <row>
+            <value description="id">9</value>
+            <value description="name">ROLE_CURRICULUM_RESOURCE_ANNOTATOR</value>
+            <value description="description"><![CDATA[Usage of the editing front-end of 
+            the community platform in order to annotate resources as referencing(?) the 
+            given competencies or topics, being made for the given educational-programme,
+            or with many other fields (such as authorships or license).]]></value>
+        </row>
+        <row>
+            <value description="id">10</value>
+            <value description="name">ROLE_CURRICULUM_RESOURCE_QUERIER</value>
+            <value description="description"><![CDATA[Usage of the text-search of the 
+            platform, or the ontology or curriculum-texts browsing, in order to find 
+            relevant resources.]]></value>
+        </row>
+    </table>
+    <table name="user_role">
+        <column>user_id</column>
+        <column>role_id</column>
+        <row>
+            <value description="user_id">1</value>
+            <value description="role_id">2</value>
+        </row>
+        <row>
+            <value description="user_id">2</value>
+            <value description="role_id">1</value>
+        </row>
+        <row>
+      		<value description="user_id">3</value>
+      		<value description="role_id">3</value>
+    	</row>
+    	<row>
+      		<value description="user_id">4</value>
+      		<value description="role_id">4</value>
+   		</row>
+    	<row>
+      		<value description="user_id">5</value>
+      		<value description="role_id">5</value>
+    	</row>
+    	<row>
+      		<value description="user_id">6</value>
+      		<value description="role_id">6</value>
+    	</row>
+    	<row>
+      		<value description="user_id">7</value>
+      		<value description="role_id">7</value>
+    	</row>
+    	<row>
+      		<value description="user_id">8</value>
+      		<value description="role_id">8</value>
+    	</row>
+    	<row>
+      		<value description="user_id">9</value>
+      		<value description="role_id">9</value>
+    	</row>
+    	<row>
+      		<value description="user_id">10</value>
+      		<value description="role_id">10</value>
+    	</row>        
+	    <row>
+    		<value description="user_id">11</value>
+ 	     	<value description="role_id">2</value>
+   		</row>
+	    <row>
+    		<value description="user_id">11</value>
+ 	     	<value description="role_id">6</value>
+   		</row>
+	    <row>
+    		<value description="user_id">11</value>
+ 	     	<value description="role_id">8</value>
+   		</row>
+   	 	<row>
+      		<value description="user_id">12</value>
+      		<value description="role_id">2</value>
+    	</row>
+   	 	<row>
+      		<value description="user_id">12</value>
+      		<value description="role_id">6</value>
+    	</row>
+   	 	<row>
+      		<value description="user_id">12</value>
+      		<value description="role_id">8</value>
+    	</row>
+    	<row>
+      		<value description="user_id">13</value>
+      		<value description="role_id">2</value>
+    	</row>
+    	<row>
+      		<value description="user_id">13</value>
+      		<value description="role_id">6</value>
+    	</row>
+    	<row>
+      		<value description="user_id">13</value>
+      		<value description="role_id">8</value>
+    	</row>
+    	<row>
+      		<value description="user_id">14</value>
+      		<value description="role_id">2</value>
+    	</row>
+    	<row>
+      		<value description="user_id">14</value>
+      		<value description="role_id">6</value>
+    	</row>
+    	<row>
+      		<value description="user_id">14</value>
+      		<value description="role_id">8</value>
+    	</row>
+	</table>
+</dataset>

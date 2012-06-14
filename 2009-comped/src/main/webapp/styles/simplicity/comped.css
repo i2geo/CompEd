@@ -1,0 +1,129 @@
+/**
+	This CSS file contains descrptions for the front page. The goal is, to reuse these
+	descriptions for other places such as showXXX.
+	
+	Author: Martin Homik
+*/
+#lastCreatedCompetencies, #lastModifiedCompetencies, #lastCreatedProcesses, #lastModifiedProcesses,
+#lastCreatedTopics, #lastModifiedTopics, #lastCreatedTopicGroups, #lastModifiedTopicGroups, cMenuConcrete,
+cMenuProcess, tMenuConcrete, tMenuAbstract {
+	border-bottom: 0px dotted #999999;
+	position: relative;
+	width: 350px;
+	/* margin: 0 0 0 60px; */	
+}
+
+#lastCreatedCompetencies h3, #lastModifiedCompetencies h3, #cMenuConcrete h3 {
+	background-image: url(images/64x64/ksirtet.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	width: 286px;
+	height: 66px;
+	margin-bottom: -5px;	
+	text-indent: 50px;
+	text-align: right;
+	font-size: large;
+}
+
+#lastCreatedProcesses h3, #lastModifiedProcesses h3, #cMenuProcess h3 {
+	background-image: url(images/64x64/blockdevice.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	width: 286px;
+	height: 66px;
+	margin-bottom: -5px;	
+	text-indent: 50px;
+	text-align: right;
+	font-size: large;
+}
+
+#lastCreatedTopics h3, #lastModifiedTopics h3 {
+	background-image: url(images/64x64/kivio.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	width: 286px;
+	height: 66px;
+	margin-bottom: -5px;	
+	text-indent: 50px;
+	text-align: right;
+	font-size: large;
+}
+
+#lastCreatedTopicGroups h3, #lastModifiedTopicGroups h3 {
+	background-image: url(images/64x64/kivio.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	width: 286px;
+	height: 66px;
+	margin-bottom: -5px;	
+	text-indent: 50px;
+	text-align: right;
+	font-size: large;
+}
+
+#cMenuConcrete h3 {
+	background-image: url(images/64x64/ksirtet.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	width: 286px;
+	height: 66px;
+	margin-bottom: -5px;	
+	text-indent: 70px;
+	text-align: left;
+	font-size: large;
+}
+
+#cMenuProcess h3 {
+	background-image: url(images/64x64/blockdevice.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	width: 286px;
+	height: 66px;
+	margin-bottom: -5px;	
+	text-indent: 70px;
+	text-align: left;
+	font-size: large;
+}
+
+#tMenuConcrete h3 {
+	background-image: url(images/64x64/kivio.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	width: 286px;
+	height: 66px;
+	margin-bottom: -5px;	
+	text-indent: 70px;
+	text-align: left;
+	font-size: large;
+}
+
+#tMenuAbstract h3 {
+	background-image: url(images/64x64/kivio.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	width: 286px;
+	height: 66px;
+	margin-bottom: -5px;	
+	text-indent: 70px;
+	text-align: left;
+	font-size: large;
+}
+
+/* not in use */
+.help {
+	background-image: url(images/16x16/support.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	text-align: left;
+	text-indent: 50px;
+	width:32px;
+	height:32px;
+}
+
+.user {
+	background-image: url(images/16x16/personal.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left:23px;
+	text-align: left;
+}

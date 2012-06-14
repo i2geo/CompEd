@@ -1,0 +1,84 @@
+/* added weblog.css stylesheet for displaying weblogs
+
+Version: 1.0
+(April 21, 2008) */
+
+/* TOPIC DIVS */
+
+.topic {
+    border-width: medium;
+    border-color: black;
+	margin:0.5em 0.5em 3em;
+	padding:0.5em;
+}
+
+.topic-relations {
+}
+
+.topic-relations ul {
+}
+	
+.topic-relations ul li {
+	/* line-height: 2.5ex; */
+	display: block; 
+	padding-top: 1px; 
+	margin-bottom: 1px; 
+	list-style: none;
+}
+
+.topic-date {
+	color:#999999;
+	margin:0pt;
+	padding:0pt;
+}
+
+.topic-title {
+	border:medium none;
+	font-size:160%;
+	margin:5px 0pt 0.5em;
+	padding:0pt;
+}
+
+.topic-sub-title {
+	border:none;
+	font-size:120%;
+	margin:15px 0pt 0.5em;
+	padding:0pt;
+	border-bottom: 1px;
+	border-bottom-style: solid;
+}
+
+.topic-content {
+	margin:0pt;
+	padding:0.2em 0pt;
+}
+
+.topic-info {
+	border-top:1px solid #CCCCCC;
+	clear:both;
+	color:#999999;
+	font-size:0.9em;
+	margin:0pt;
+	padding:3px 0pt;
+}
+
+.topic-comments {
+	float:right;
+}
+
+.topic-info em {
+	color:#666666;
+	font-style:normal;
+}
+
+
+.topic-info em.cat {
+	/* background:transparent url(img/star.png) no-repeat scroll left center; */
+	padding:2px 0pt 2px 12px;
+}
+
+#comments, #respond {
+	margin:2em 0pt 0pt 5px;
+}
+
+/* END COMPETENCY DIVS */
