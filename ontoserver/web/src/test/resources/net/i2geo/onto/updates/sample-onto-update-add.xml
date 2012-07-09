@@ -1,0 +1,56 @@
+<ontoUpdates
+    xmlns:gs="http://www.inter2geo.eu/2008/ontology/GeoSkills#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.inter2geo.eu/2008/ontology/ontoUpdates.owl#"
+  >
+    <Session>
+      <Name>love-of-comped.draft-and-geoskills.draft</Name>
+      <ServerResponse>http://draft.i2geo.net/comped/ontoUpdate</ServerResponse>
+    </Session>
+    <Additions>
+      <owl:Competency rdf:ID="fancy_competency">
+        <gs:commonName xml:lang="fr">compétence fantaisiste</gs:commonName>
+        <gs:rareName xml:lang="fr">compétence farfelue</gs:rareName>
+      </owl:Competency>
+      <!-- ... new URIs here... all info has to be included -->
+    </Additions>
+    <Updates>
+      <!-- the element name is the "base-type"... for now Topic or Competency -->
+      <owl:Competency rdf:ID="Construct_rhombus">
+        <!-- information here ADDs to the existing individuals or class -->
+        <rdf:Type rdf:resource="Construct"/><!-- actual types are with rdf:type -->
+        <!-- for data properties we fully imitate OWL -->
+        <gs:commonName xml:lang="fr" default="true">tracer un losange</gs:commonName>
+        <gs:commonName xml:lang="fr">tracer un losange à la règle graduée et au compas</gs:commonName>
+        <gs:unCommonName xml:lang="fr">dessiner un losange</gs:unCommonName>
+        <!-- .... -->
+        <!-- for object properties: the simple RDF reference -->
+        <gs:hasTopic rdf:resource="#Rhombus_r"/>
+        <gs:hasTopic rdf:resource="#Ruler_r"/>
+        <gs:hasTopic rdf:resource="#Compass_r"/>
+       <gs:creator>Paul</gs:creator><!-- that would be only if this is changed, pretty rare -->
+       <gs:lastModifiedBy>Paul</gs:lastModifiedBy>
+       <gs:created>2007-06-30 10:30:00</gs:created>
+       <gs:modified>2007-06-30 10:30:00</gs:modified>
+      </owl:Competency>
+    </Updates>
+    <Deletions>
+      <!-- delete an individual -->
+      <gs:Thing rdf:ID="median_r"/>
+      <!-- properties here are deleted from the existing individuals -->
+      <owl:Competency rdf:ID="Construct_rhombus">
+        <gs:hasTopic rdf:resource="#Polygon_r"/>
+      </owl:Competency><!-- so: delete property hasTopic:Polygon_r -->
+
+    </Deletions>
+    <NameChange>
+      <!-- change the name of an individual -->
+      <gs:Thing rdf:ID="oldName_r">newName_r</gs:Thing>
+    </NameChange>
+    <ClassChange>
+      <!-- change the class of an individual -->
+      <gs:Class rdf:ID="Name">newClass</gs:Thing>
+    </ClassChange>
+</ontoUpdates>

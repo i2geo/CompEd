@@ -1,0 +1,52 @@
+HOWTO use XSTREAM to serialize/deserialize Objects
+--------------------------------------------------
+
+Also see:
+ - http://xstream.codehaus.org/tutorial.html
+ - http://xstream.codehaus.org/annotations-tutorial.html
+ 
+Install
+
+ * Add xastram lib to your project
+ * Possibly create a convenience class XstreamHelper, which automatically
+   configures xstream and gives an Xstream object back...
+   
+Usage
+
+ Annotations:
+  
+   * use annotations for your POJOs to receive the proper format, e.g.:
+   
+     @XStreamAlias("ExmplClass")   // encapsulates the class into
+     class Example {               //  <ExmplClass>
+                                   //  </ExmplClass> 
+
+        @XStreamAlias("Name")          // results in:
+        Sting me = "valueInVariable";  //  <ExmplClass>
+                                       //    <Name>valueInVariable</Name>
+                                       //  </ExmplClass>
+        
+        
+        MyAnnotatedClass somthing_else;// uses the annotation of MyAnnotatedClass
+                       
+        @XStreamAlias("ID")          // adds field as attribute:
+        @XStreamAsAttribute          //  <ExmplClass ID="myClass">                 
+        String classId = "myClass";  //  </ExmplClass>
+     }
+ 
+ Actual use:
+
+   * create a new xstream object:
+ 
+      XStream xstream = new XStream();
+    
+   * process Annotations:
+   
+      xstream.processAnnotations(objectToBeSerializedToXML.getClass());
+       
+    
+   * convert to XML:
+ 
+      String xml = xstream.toXML(objectToBeSerializedToXML);
+
+That's it...
